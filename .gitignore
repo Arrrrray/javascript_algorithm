@@ -1,2 +1,3 @@
 nodeModules/
 .DS_Store
+dist/
