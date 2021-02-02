@@ -1,0 +1,71 @@
+<!--
+ * @Author: junchao
+ * @Date: 2021-02-01 19:06:56
+ * @LastEditTime: 2021-02-02 13:09:20
+ * @LastEditors: junchao
+ * @Description: 
+ * @FilePath: /javascript_algorithm/test/meituan/1.html
+ * @可以输入预定的版权声明、个性签名、空行等
+-->
+<!-- 实现一个字符串无限滚动的效果 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实现一个字符串无限滚动的效果</title>
+</head>
+<style>
+  .tips{
+    position: absolute;
+    top: 10px;
+    overflow: hidden;
+    width: 750px;
+    height: 30px;
+    background-color: #f3f3f3;
+  }
+  .tips-text{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 750px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    animation-name: tips-text;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+  }
+  @keyframes tips-text {
+    0%{
+      transform: translateX(750px);
+    }
+    20%{
+      transform: translateX(450px);
+    }
+    40%{
+      transform: translateX(150px);
+    }
+    60%{
+      transform: translateX(-150px);
+    }
+    80%{
+      transform: translateX(-450px);
+    }
+    100%{
+      transform: translateX(-750px);
+    }
+  }
+</style>
+<body>
+  <div class="tips">
+    <div class="tips-text">一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串一段无限滚动的字符串</div>
+  </div>
+</body>
+</html>
